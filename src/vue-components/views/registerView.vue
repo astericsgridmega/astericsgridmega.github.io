@@ -7,14 +7,26 @@
                 <div class="srow">
                     <label for="inputUser" class="two columns"><span class="desktop-right inputlabel">{{ $t('username') }}</span></label>
                     <input type="text" name="username" autocapitalize="none" v-model="user" id="inputUser" class="six columns" @input="validateUsername" v-focus="" maxlength="16"/>
-                    <div class="three columns" v-show="user != null && usernameValid === undefined">
+                    <div class="three columns" v-show="user != null && emailValid === undefined">
                         <i class="fas fa-spinner fa-spin"/>
                     </div>
-                    <div class="three columns" v-show="user != null && usernameValid == false">
+                    <div class="three columns" v-show="user != null && emailValid == false">
                         <i style="color: red;" class="fas fa-times"/> <span>{{usernameValidationCode | translate}}</span>
                     </div>
                     <div class="three columns" v-show="user != null && usernameValid == true">
                         <i style="color: green;" class="fas fa-check"/> <span>{{ $t('validUsername') }}</span>
+                    </div>
+                </div>
+                <label for="inputEmail" class="two columns"><span class="desktop-right inputlabel">{{ $t('email') }}</span></label>
+                    <input type="text" name="email" autocapitalize="none" v-model="email" id="inputEmail" class="six columns" @input="validateEmail" v-focus="" maxlength="16"/>
+                    <div class="three columns" v-show="user != null && emailValid === undefined">
+                        <i class="fas fa-spinner fa-spin"/>
+                    </div>
+                    <div class="three columns" v-show="user != null && usernameValid == false">
+                        <i style="color: red;" class="fas fa-times"/> <span>{{emailValidationCode | translate}}</span>
+                    </div>
+                    <div class="three columns" v-show="user != null && usernameValid == true">
+                        <i style="color: green;" class="fas fa-check"/> <span>{{ $t('validEmail') }}</span>
                     </div>
                 </div>
                 <div class="srow">
@@ -39,7 +51,7 @@
                     <b>{{ $t('importantInformation') }}</b>
                     <ul style="list-style-type: none; margin-bottom: 0">
                         <li v-html="$t('yourPasswordWillBeUsedInOrderToEncrypt')"></li>
-                        <li v-html="$t('usersWillBeDeletedAfterNotLoggingInFor365Days')"></li>
+                        <li v-html="$t('usersWillBeDeletedAfterNotLoggingInFor30days')"></li>
                     </ul>
                 </div>
             </div>
@@ -119,6 +131,9 @@
         data() {
             return {
                 user: null,
+                email: null,
+                emailValid: null,
+                emailValidationCode: null,
                 usernameValid: null,
                 usernameValidationCode: null,
                 password: null,
@@ -126,7 +141,7 @@
                 privacyConsent: false,
                 registerSuccess: null,
                 creationTime: new Date().getTime(),
-                spamTime: 10000,
+                spamTime: 0,
                 validationErrors: []
             }
         },
