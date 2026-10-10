@@ -1,3 +1,7 @@
+import $ from '../../externals/jquery.js';
+import { i18nService } from '../i18nService.js';
+import { constants } from '../../util/constants.js';
+import { GridImage } from '../../model/GridImage.js';
 import { imageUtil } from '../../util/imageUtil';
 
 let QUERY_URL = 'https://www.bing.com/images/search?q=';
