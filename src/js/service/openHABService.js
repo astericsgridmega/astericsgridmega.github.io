@@ -34,8 +34,8 @@ openHABService.sendAction = async function (action) {
 openHABService.getRestURL = function (userUri) {
     if (!userUri) {
         userUri =
-            window.location.hostname.indexOf('grid.asterics.eu') > -1
-                ? 'http://127.0.0.1:8080'
+            window.location.hostname.indexOf('astericsgridmega.github.io') > -1
+                ? 'http://192.168.1.82:8080'
                 : 'http://' + window.location.hostname + ':8080';
     }
 
