@@ -421,7 +421,6 @@
   "play": "Reproducir",
   "stop": "Detener",
   "up": "Subir",
-  "noInternetConnection": "¡No hay conexión a internet online '{0}' en online para presionamos modo sin conexión de cuenta offline!"
   "noSelectedRadioStationsUseSearchBar": "No hay emisoras de radio seleccionadas, utilice la barra de búsqueda inferior para añadir emisoras de radio.",
   "noSelectedPodcastsUseSearchBar": "No hay podcasts seleccionados, utilice el buscador inferior para añadir podcasts.",
   "webradioSearch": "Búscar Emisoras de Radio Web",
