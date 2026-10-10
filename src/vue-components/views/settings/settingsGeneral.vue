@@ -15,7 +15,7 @@
                     <span class="break-word">
                     <i18n path="ifTheTranslationForYourLanguageIsNotAvailable" tag="span">
                         <template v-slot:crowdin>
-                            <a href="https://crowdin.com/project/asterics-grid" target="_blank">crowdin.com</a>
+                            <a href="https://crowdin.com/project/astericsgridmega" target="_blank">crowdin.com</a>
                         </template>
                     </i18n>
                 </span>
