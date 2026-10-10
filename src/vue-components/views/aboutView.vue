@@ -102,7 +102,7 @@
                             <a target="_blank" href="https://responsivevoice.org">ResponsiveVoice.org</a>
                         </template>
                     </i18n>
-                    <div class="mb-3"><a href="https://www.opensymbols.org">OpenSymbols</a> {{ $t('licensedUnder') }} <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech, Creative Commons and OpenSymbols" src="app/img/responsive-voice-license.png" alt="95x15" width="95" height="15" /></a></div>
+                    <div class="mb-3"><a href="https://www.opensymbols.org">OpenSymbols</a> {{ $t('licensedUnder') }} <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img title="ResponsiveVoice Text To Speech" src="app/img/responsive-voice-license.png" alt="95x15" width="95" height="15" /></a></div>
                     <div>
                         {{ $t('thanksToEduardoLleidaSolanoProfessorAtDepartment') }}
                     </div>
